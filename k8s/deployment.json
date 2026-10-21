@@ -1,0 +1,35 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "beacon"
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "beacon"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "beacon"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "beacon",
+            "image": "beacon-service:latest",
+            "ports": [
+              {
+                "containerPort": 8080
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+name: Beacon release review
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest -v
+  production:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Review only, no deployment
+        env:
+          REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+        run: echo "Release review only. No credentials used or printed. No deployment."

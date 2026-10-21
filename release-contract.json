@@ -1,0 +1,8 @@
+{
+  "candidate": "v2.3.1",
+  "candidate_image": "beacon-service:v2.3.1",
+  "known_good_image": "beacon-service:v2.3.0",
+  "release_kind": "backward-compatible bug fix",
+  "approval_status": "NOT REQUESTED",
+  "deployment_status": "NOT DEPLOYED"
+}
