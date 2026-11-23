@@ -23,3 +23,13 @@ Local validation proof:
 Open risk / owner / mitigation:
 Current production decision and blocker:
 Terraform vs Kubernetes responsibilities:
+
+
+## Task 1: Checked release.yml
+Reviewed and checked release.yml file and added needs: validate to pass the check_release.py
+
+## Task 2: Checked deployment.json
+Reviewed and checked deployment.json file and found the image version error and changed the image:latest to image:v2.3.1
+
+## Task 3: Checked rollback.json
+Reviewed and checked rollback.json file and found the version error so changed beacon-service:v2.3.1 to beacon-service:v2.3.0
