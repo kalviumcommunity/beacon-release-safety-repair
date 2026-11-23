@@ -15,6 +15,7 @@ jobs:
   production:
     runs-on: ubuntu-latest
     environment: production
+    needs: validate
     steps:
       - name: Review only, no deployment
         env:
